@@ -1,0 +1,45 @@
+simultaneous raffles: 1
+lengths:
+  default: 3m
+  max: 5m
+  min: 1m
+
+cooldowns:
+  global: 1m
+  user: 10m
+
+no entry flag: 'itemraffle-entry'
+no create flag: 'itemraffle-create'
+
+servers:
+  main: spawn
+  children:
+    - server1
+
+messages:
+  invalid duration: '&cInvalid duration! &fUse 1m for a duration of 1 minute.'
+  length minimum: '&cDuration is too low! &fUse a duration larger than {0}.'
+  length maximum: '&cDuration is too high! &fUse a duration smaller than {0}.'
+  no permission: '&cYou do not have permission to use this command!'
+  reloaded config: '&aReloaded the config!'
+  no hand item: '&cYou need to hold an item to raffle off!'
+  item error: '&cUnable to use that item!'
+  too many raffles: '&cUnable to create a new raffle! &fThere is already {0} running. Please try again after those finish.'
+  global cooldown: '&cYou cannot create a raffle right now because there was one recently! &fPlease try again later.'
+  error: '&cAn error occurred.'
+  no console: 'Console cannot run this command.'
+  created: '&aSuccess! &fRunning the raffle...'
+  you won: '&6Congratulations! &fYou have won the raffle by {0}&f.'
+  refunded: '&cNo one was able to claim your raffle item! &fYou have been given back the item.'
+  countdown:
+    - '&6&l----'
+    - '&fJoin &b&l{0}&f''s raffle by &f&lclicking here&f!'
+    - '&fEnds in &e{1}&f!'
+    - '&6&l----'
+  bad usage: '&cIncorrect usage! &f/raffle {0} {1}'
+  command cooldown: '&cSlow down! You cannot do this so quickly.'
+  bad uuid: '&cInvalid player UUID provided.'
+  no self join: '&cYou cannot join your own raffles!'
+  no raffle: '&cThere was no running raffle by that creator.'
+  entered: '&aSuccessfully joined the raffle!'
+  already entered: '&cYou have already joined this raffle!'

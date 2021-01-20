@@ -1,0 +1,31 @@
+name: ItemRaffles
+main: me.marveldc.itemraffles.ItemRaffles
+version: 1.0.0
+commands:
+  raffle:
+    description: Item Raffles
+
+permissions:
+  itemraffles.*:
+    default: op
+    children:
+      - itemraffles.create
+      - itemraffles.enter
+      - itemraffles.reload
+      - itemraffles.ignorelengths
+      - itemraffles.ignorecooldowns
+  itemraffles.create:
+    default: false
+    description: Can create raffles
+  itemraffles.enter:
+    default: true
+    description: Can enter raffles
+  itemraffles.reload:
+    default: op
+    description: Can reload config
+  itemraffles.ignorelengths:
+    default: false
+    description: Can ignore the min and max lengths set in config
+  itemraffles.ignorecooldowns:
+    default: false
+    description: Can ignore global and user cooldowns set in config
